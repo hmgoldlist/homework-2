@@ -1,0 +1,108 @@
+body {
+    background-color: yellow;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: white;
+}
+
+h1 {
+    color: red;
+    text-align: center;
+}
+
+p::first-letter {
+    font-size: 3em;
+    font-weight: bold;;
+    font-style: italic;
+}
+
+h2 {
+    text-align: right;
+    color: blue;
+    font-style: italic;
+}
+
+h2.large {
+    font-size: 3em;
+}
+
+h3 {
+    text-align: right;
+    color: red;
+}
+
+table {
+    background-color: cyan;
+    border-spacing: 0.313em;
+    animation-name: table_background;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards;
+}
+
+td {
+    padding: 0.625em;
+}
+
+td.left {
+    text-align: center;
+}
+
+td.bold {
+    font-weight: bold;
+}
+
+.red {
+    color: red;
+}
+
+.scrolling {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+.scrolling h3 {
+    background-color: lightskyblue;
+    font-size: 1.2em;
+    color: white;
+    width: 25%;
+    position: absolute;
+    text-align: center;
+    -moz-animation: scrolling 5s infinite;
+    -webkit-animation: scrolling 5s infinite;
+    animation: scrolling 5s infinite;
+}
+
+@keyframes scrolling {
+    0%{
+        -moz-transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+    50%{
+        -moz-transform: translateX(300%);
+        -webkit-transform: translateX(300%);
+        transform: translateX(300%);
+    }
+    100%{
+        -moz-transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+}
+
+@keyframes table_background {
+    from {
+        background-color: cyan;
+        color: black;
+    }
+    to {
+        color: white;
+        background-color: green;
+    }
+}
